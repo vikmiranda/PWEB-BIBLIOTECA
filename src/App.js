@@ -18,7 +18,7 @@ function App() {
     };
 
     const handleClickButton = () =>{
-        Axios.post("https://biblioteca-pweb.herokuapp.com/livros/cadastrar-livro", {
+        Axios.post("https://biblioteca-pweb-server.herokuapp.com/livros/cadastrar-livro", {
             titulo: values.titulo,
             autor:  values.autor,
             isbn:   values.isbn,
@@ -30,7 +30,7 @@ function App() {
     };
 
     useEffect(()=>{
-        Axios.get("https://biblioteca-pweb.herokuapp.com/livros").then((response)=>{
+        Axios.get("https://biblioteca-pweb-server.herokuapp.com/livros").then((response)=>{
             setListLivros(response.data);
         });
     
