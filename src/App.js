@@ -24,8 +24,16 @@ function App() {
             isbn:   values.isbn,
             resumo: values.resumo,
             ano_lancamento: values.ano_lancamento,
-        }).then((response) => {
-            console.log(response);
+        }).then(() => {
+            setListLivros([
+                ...listLivros,{
+                    titulo: values.titulo,
+                    autor:  values.autor,
+                    isbn:   values.isbn,
+                    resumo: values.resumo,
+                    ano_lancamento: values.ano_lancamento,
+                }
+            ]);
         });
     };
 
@@ -87,7 +95,7 @@ function App() {
                     key={value._id}
                     listCard ={listLivros} 
                     setlistCard={setListLivros}
-                    id={value.id}
+                    id={value._id}
                     titulo = {value.titulo}
                     autor = {value.autor}
                     isbn = {value.isbn}

@@ -1,12 +1,27 @@
 import React from "react"
-
+import FormDialog from "../dialog/dialog"
 
 export default function Card(props){
-   
-   console.log(`props titulo${props.titulo}`)
+   const [open, setOpen] = React.useState(false);
+   const handleClickCard = () => {
+    setOpen(true);
+   }
+
+   //console.log(`props titulo${props.titulo}`)
    return (
-        
-    <div className="card-container">
+    <>
+
+    <FormDialog open={open} setOpen={setOpen} 
+    id={props.id}
+    titulo={props.titulo} 
+    autor={props.autor} 
+    isbn={props.isbn}
+    resumo={props.resumo}
+    ano_lancamento={props.ano_lancamento}
+    listCard={props.listCard}
+    setlistCard={props.setlistCard}   />
+
+    <div className="card-container" onClick={() => handleClickCard()}>
            
            <h2>{props.titulo}</h2>
 
@@ -31,7 +46,7 @@ export default function Card(props){
            </div>
 
        </div>
-
+       </>
 
 
     )
