@@ -33,7 +33,7 @@ export default function FormDialog(props) {
   // PUT AQUI
   const handleEditLivro = () => {
     //console.log(`props.id aqui >>>>> ${editValues.id}  titulo: ${editValues.titulo}`)
-    Axios.put(`http://localhost:3000/livros/${editValues.id}`, {
+    Axios.put(`https://biblioteca-pweb-server.herokuapp.com/livros/${editValues.id}`, {
       titulo: editValues.titulo,
       autor: editValues.autor,
       isbn: editValues.isbn,
@@ -45,7 +45,7 @@ export default function FormDialog(props) {
 
   //DELETE AQUI
   const handleDeleteLivro = () => {
-    Axios.delete(`http://localhost:3001/livros/${editValues.id}`).then(() => {
+    Axios.delete(`https://biblioteca-pweb-server.herokuapp.com/livros/${editValues.id}`).then(() => {
       props.setListCard(
         props.listCard.filter((value) => {
           return value.id != editValues.id;
