@@ -1,4 +1,11 @@
 # Projeto CRUD de biblioteca criado como parte avaliativa da matéria de PROGRAMAÇÃO WEB  
 
-O back-end foi feito em NodeJS + ExpressJs
-Frontend em REACT
+## Back-end:
+NodeJS + ExpressJs
+
+## Frontend:
+REACT
+
+##Hospedagem:
+Server: https://biblioteca-pweb-server.herokuapp.com/livros
+Site(Front-end): ------
