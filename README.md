@@ -8,5 +8,7 @@ REACT
 
 ## Hospedagem:
 Server: https://biblioteca-pweb-server.herokuapp.com/livros
+Repositório Back-end: https://github.com/vikmiranda/PWEB-atv-backend
+
 
 Site(Front-end): ------
